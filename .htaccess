@@ -1,0 +1,8 @@
+<FilesMatch ".(?:html|php)$">
+SetHandler application/x-lsphp81
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
